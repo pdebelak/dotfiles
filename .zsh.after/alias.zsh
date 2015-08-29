@@ -1,7 +1,7 @@
 # Shell Aliases
 
 # minitest aliases
-alias minitest-'ruby -Ilib:test'
+alias minitest='ruby -Ilib:test'
 alias mt='minitest'
 
 # tmux aliases
