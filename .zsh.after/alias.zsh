@@ -11,6 +11,13 @@ alias tma='tm attach -t'
 alias tms='tm switch -t'
 alias tmls='tm list-sessions'
 
+# google it!
+goog () {
+  args=$*
+  search=`ruby -e "require 'cgi';puts CGI::escape('$args')"`
+  open /Applications/Google\ Chrome.app/ "https://www.google.com/#q=$search"
+}
+
 # DevOps
 name_to_ip () {
   ip=`knife search node name:$1 | awk '/IP/{print $2;}'`
