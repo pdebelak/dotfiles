@@ -2,6 +2,8 @@
 
 # use <C-s> in vim
 alias vim="stty stop '' -ixoff ; vim"
+# restart stty on terminal command
+ttyctl -f
 
 # minitest aliases
 alias minitest='ruby -Ilib:test'
