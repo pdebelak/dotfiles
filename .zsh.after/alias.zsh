@@ -1,5 +1,8 @@
 # Shell Aliases
 
+# use <C-s> in vim
+alias vim="stty stop '' -ixoff ; vim"
+
 # minitest aliases
 alias minitest='ruby -Ilib:test'
 alias mt='minitest'
