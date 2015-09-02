@@ -6,3 +6,5 @@ mkdir -p ~/.zsh.after
 ln -sf $DIR/.zsh.after/* ~/.zsh.after/
 echo "Symlinking .gitconfig.user..."
 ln -sf $DIR/.gitconfig.user ~/.gitconfig.user
+echo "Symlinking .vimrc.after..."
+ln -sf $DIR/.vimrc.after ~/.vimrc.after
