@@ -1,6 +1,6 @@
 nnoremap <Leader>sv :RelatedSpecVOpen<CR>
 nnoremap <Leader>stsl :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
-nnoremap <Leader>stsr :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
-nnoremap <Leader>strl :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
-nnoremap <Leader>strs :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
-nnoremap <Leader>stm :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
+nnoremap <Leader>stsr :call Send_to_Tmux(SpringRSpec() . "\n")<CR>
+nnoremap <Leader>strl :call Send_to_Tmux(RSpecLine() . "\n")<CR>
+nnoremap <Leader>strs :call Send_to_Tmux(RSpec() . "\n")<CR>
+nnoremap <Leader>stm :call Send_to_Tmux(Minitest() . "\n")<CR>
