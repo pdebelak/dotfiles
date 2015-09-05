@@ -7,5 +7,14 @@ nnoremap <Leader>strs :call Send_to_Tmux(RSpec() . "\n")<CR>
 nnoremap <Leader>stmt :call Send_to_Tmux(Minitest() . "\n")<CR>
 nnoremap <Leader>stml :call Send_to_Tmux(MinitestLine() . "\n")<CR>
 
+nnoremap <Leader>stt :call TextToTmux()<CR>
+
 :autocmd BufWritePre * :StripTrailingWhitespaces
 :autocmd BufNewFile,BufRead *.md setlocal wrap
+
+function TextToTmux()
+  call inputsave()
+  let a:command = input("Enter command: ")
+  call inputrestore()
+  call Send_to_Tmux(a:command . "\n")
+endfunction
