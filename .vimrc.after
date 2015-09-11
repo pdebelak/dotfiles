@@ -1,13 +1,16 @@
 nnoremap <Leader>sv :RelatedSpecVOpen<CR>
 
-nnoremap <Leader>stsl :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
-nnoremap <Leader>stsr :call Send_to_Tmux(SpringRSpec() . "\n")<CR>
-nnoremap <Leader>strl :call Send_to_Tmux(RSpecLine() . "\n")<CR>
-nnoremap <Leader>strs :call Send_to_Tmux(RSpec() . "\n")<CR>
-nnoremap <Leader>stmt :call Send_to_Tmux(Minitest() . "\n")<CR>
-nnoremap <Leader>stml :call Send_to_Tmux(MinitestLine() . "\n")<CR>
+if !has("gui_running")
+  nnoremap <Leader>sl :call Send_to_Tmux(SpringRSpecLine() . "\n")<CR>
+  nnoremap <Leader>ss :call Send_to_Tmux(SpringRSpec() . "\n")<CR>
+  nnoremap <Leader>rl :call Send_to_Tmux(RSpecLine() . "\n")<CR>
+  nnoremap <Leader>rs :call Send_to_Tmux(RSpec() . "\n")<CR>
+  nnoremap <Leader>smt :call Send_to_Tmux(Minitest() . "\n")<CR>
+  nnoremap <Leader>sml :call Send_to_Tmux(MinitestLine() . "\n")<CR>
 
-nnoremap <Leader>stt :call TextToTmux()<CR>
+  nnoremap <Leader>st :call TextToTmux()<CR>
+endif
+
 
 :autocmd BufWritePre * :StripTrailingWhitespaces
 :autocmd BufNewFile,BufRead *.md setlocal wrap
