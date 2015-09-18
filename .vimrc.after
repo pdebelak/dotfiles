@@ -12,8 +12,9 @@ if !has("gui_running")
 endif
 
 
-:autocmd BufWritePre * :StripTrailingWhitespaces
-:autocmd BufNewFile,BufRead *.md setlocal wrap
+autocmd BufWritePre * :StripTrailingWhitespaces
+autocmd BufNewFile,BufRead *.md setlocal wrap
+autocmd BufRead,BufNewFile *.md setlocal spell
 
 function TextToTmux()
   call inputsave()
