@@ -10,3 +10,7 @@ alias tmn='tm new -s'
 alias tma='tm attach -t'
 alias tms='tm switch -t'
 alias tmls='tm list-sessions'
+tat() {
+  name=`basename "$PWD"`
+  tmux attach -t $name || tmux new -s $name
+}
