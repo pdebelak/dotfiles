@@ -4,7 +4,7 @@ SESSION=blog
 
 tmux new-session -d -s $SESSION
 
-cd ~/programs/pdebelak.github.io
+cd ~/programs/peterdebelak
 tmux split-window -v
 tmux resize-pane -D 10
 tmux select-pane -t 1
