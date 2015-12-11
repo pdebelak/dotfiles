@@ -14,6 +14,18 @@ if !has("gui_running")
   autocmd FileType elixir nnoremap <Leader>sml :call Send_to_Tmux(MixTestLine() . "\n")<CR>
 
   nnoremap <Leader>st :call TextToTmux()<CR>
+  set background=light
+
+  nnoremap <C-t>n :tabnew<CR>
+  nnoremap <C-t>1 :tabn 1<CR>
+  nnoremap <C-t>2 :tabn 2<CR>
+  nnoremap <C-t>3 :tabn 3<CR>
+  nnoremap <C-t>4 :tabn 4<CR>
+  nnoremap <C-t>5 :tabn 5<CR>
+  nnoremap <C-t>6 :tabn 6<CR>
+  nnoremap <C-t>7 :tabn 7<CR>
+  nnoremap <C-t>8 :tabn 8<CR>
+  nnoremap <C-t>9 :tabn 9<CR>
 endif
 
 
@@ -41,5 +53,3 @@ autocmd FileType ruby imap <buffer> <C-x>c <Plug>(seeing_is_believing-clean)
 autocmd FileType ruby nmap <buffer> <C-x>r <Plug>(seeing_is_believing-run_-x)
 autocmd FileType ruby xmap <buffer> <C-x>r <Plug>(seeing_is_believing-run_-x)
 autocmd FileType ruby imap <buffer> <C-x>r <Plug>(seeing_is_believing-run_-x)
-
-set background=light
