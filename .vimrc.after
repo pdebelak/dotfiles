@@ -55,3 +55,6 @@ autocmd FileType ruby xmap <buffer> <C-x>r <Plug>(seeing_is_believing-run_-x)
 autocmd FileType ruby imap <buffer> <C-x>r <Plug>(seeing_is_believing-run_-x)
 
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['jshint']
+
+set mouse=a
+set ttymouse=xterm2
