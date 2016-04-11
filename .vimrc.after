@@ -28,6 +28,7 @@ if !has("gui_running")
   nnoremap <C-t>9 :tabn 9<CR>
 endif
 
+xnoremap <leader>cp <esc>:'<,'>:w !pbcopy<CR>
 
 autocmd BufWritePre * :StripTrailingWhitespaces
 autocmd BufNewFile,BufRead *.md setlocal wrap
