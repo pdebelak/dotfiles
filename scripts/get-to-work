@@ -1,0 +1,20 @@
+#!/bin/bash
+
+cd $HOME/dev/reverb
+tmux new -s reverb -d
+tmux send-keys -t reverb 'vagrant up; tmux wait-for -S getting-to-work' C-m\; wait-for getting-to-work
+tmux rename-window -t reverb vim
+tmux send-keys -t reverb 'vim' C-m
+
+tmux split-window -v -t reverb
+tmux new-window -t reverb
+tmux rename-window -t reverb other
+tmux send-keys -t reverb './bin/foreman s' C-m
+tmux split-window -v -t reverb
+tmux send-keys -t reverb 'zeus start' C-m
+tmux split-window -h -t reverb
+tmux select-pane -t reverb -U
+tmux split-window -h -t reverb
+tmux send-keys -t reverb 'vagrant ssh -c "service worker stop && exit"; ./bin/sidekiq' C-m
+tmux select-window -t reverb:1
+tmux attach -t reverb
