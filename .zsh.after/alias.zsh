@@ -14,3 +14,7 @@ tat() {
   name=`basename "$PWD"`
   tmux attach -t $name || tmux new -s $name
 }
+
+fb() {
+  git branch -v | grep $1
+}
