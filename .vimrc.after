@@ -73,3 +73,5 @@ function FillInIvars()
   execute "normal! F(l" . put_word_as_ivar
   execute "delmarks a"
 endfunction
+
+nnoremap <Leader>fi :call FillInIvars()<CR>
