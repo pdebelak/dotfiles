@@ -34,6 +34,8 @@ autocmd BufWritePre * :StripTrailingWhitespaces
 autocmd BufNewFile,BufRead *.md setlocal wrap
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+iabbrev :poo: 💩
+
 function TextToTmux()
   call inputsave()
   let a:command = input("Enter command: ")
