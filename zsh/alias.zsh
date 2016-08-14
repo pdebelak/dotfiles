@@ -87,3 +87,4 @@ alias grb='git recent-branches'
 alias zc='zeus console'
 
 alias :q='exit'
+alias be='bundle exec'
