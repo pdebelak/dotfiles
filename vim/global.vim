@@ -70,3 +70,25 @@ set undoreload=10000
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 hi Search ctermbg=11 ctermfg=White         " Fix searching colors
+
+" use silver searcher for ack if available
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
+" set theme
+if !has("gui_running")
+  set background=light
+else
+  set background=dark
+endif
+
+" no whitespace on save
+" autocmd BufWritePre * :StripTrailingWhitespaces
+
+" markdown conveniences
+autocmd BufNewFile,BufRead *.md setlocal wrap
+autocmd BufRead,BufNewFile *.md setlocal spell
+
+" xmpfilter
+let g:xmpfilter_cmd = "seeing_is_believing"
