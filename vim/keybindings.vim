@@ -37,3 +37,7 @@ nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 " swap them: http://items.sjbach.com/319/configuring-vim-right
 nnoremap ' `
 nnoremap ` '
+
+" hit ,f to find the definition of the current class
+" this uses ctags. the standard way to get this is Ctrl-]
+nnoremap <silent> ,f <C-]>

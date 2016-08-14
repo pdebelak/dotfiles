@@ -14,7 +14,7 @@ ln -sf $DIR/zsh/* ~/.zsh/
 
 # git symlinking
 ln -sf $DIR/gitconfig ~/.gitconfig
-ln -sf $DIR/gitconfig_global ~/.gitconfig_global
+ln -sf $DIR/gitignore_global ~/.gitignore_global
 
 # tmux symlinking
 ln -sf $DIR/tmux.conf ~/.tmux.conf
