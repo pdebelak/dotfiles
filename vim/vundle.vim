@@ -25,6 +25,8 @@ Plugin 'skwp/vim-spec-finder'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-rails'
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'AndrewRadev/splitjoin.vim'
+Plugin 'ecomba/vim-ruby-refactoring'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

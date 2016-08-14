@@ -46,3 +46,9 @@ nnoremap ` '
 " hit ,f to find the definition of the current class
 " this uses ctags. the standard way to get this is Ctrl-]
 nnoremap <silent> ,f <C-]>
+
+" ============================
+" SplitJoin plugin
+" ============================
+nmap sj :SplitjoinSplit<cr>
+nmap sk :SplitjoinJoin<cr>
