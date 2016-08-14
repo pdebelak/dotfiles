@@ -9,7 +9,6 @@ set listchars=trail:.,tab:>-,eol:$         " Change the invisible characters
 set nolist                                 " Hide invisibles by default
 set showcmd                                " Show incomplete cmds down the bottom
 set showmode                               " Show current mode down the bottom
-set cmdheight=2                            " Make the command line a little taller
 set ttyfast                                " More smooth screen redrawing
 set incsearch                              " Find the next match as we type the search
 set hlsearch                               " Highlight searches by default
@@ -84,7 +83,7 @@ else
 endif
 
 " no whitespace on save
-" autocmd BufWritePre * :StripTrailingWhitespaces
+autocmd BufWritePre * :StripTrailingWhitespaces
 
 " markdown conveniences
 autocmd BufNewFile,BufRead *.md setlocal wrap
