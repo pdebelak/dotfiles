@@ -16,6 +16,9 @@ nnoremap <silent> ,gcc :! ctags -R .<CR><CR>
 " These mappings are from https://github.com/skwp/dotfiles
 nnoremap ,ow "_diwhp
 
+" Clear current search highlight by double tapping //
+nmap <silent> // :nohlsearch<CR>
+
 nnoremap 0 ^
 nnoremap ^ 0
 
