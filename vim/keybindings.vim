@@ -11,6 +11,8 @@ xnoremap <leader>cp <esc>:'<,'>:w !pbcopy<CR><CR>
 
 autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['jshint']
 
+nnoremap <silent> ,gcc :! ctags -R .<CR><CR>
+
 " These mappings are from https://github.com/skwp/dotfiles
 nnoremap ,ow "_diwhp
 
