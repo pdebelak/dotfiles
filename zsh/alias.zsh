@@ -82,6 +82,9 @@ alias gbb='git bisect bad'
 alias gdmb='git branch --merged | grep -v "\*" | xargs -n 1 git branch -d'
 alias hpr='hub pull-request'
 alias grb='git recent-branches'
+fb() {
+  git branch -v | grep $1
+}
 
 # zeus
 alias zc='zeus console'

@@ -1,17 +1,15 @@
 #!/bin/bash
 
-#!/bin/bash
-
 SESSION=reverb
 cd $HOME/dev/$SESSION
 tmux new -s $SESSION -d
-echo 'starting vagrant'
 tmux send-keys -t $SESSION 'vagrant up; tmux wait-for -S getting-to-work' C-m\; wait-for getting-to-work
-echo 'renaming window'
 tmux rename-window -t $SESSION vim
 tmux send-keys -t $SESSION 'vim' C-m
-echo 'starting vim'
 tmux split-window -v -t $SESSION
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION working
 
 tmux new-window -t $SESSION
 tmux rename-window -t $SESSION other
