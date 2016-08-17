@@ -12,6 +12,9 @@ ln -sf $DIR/zshrc ~/.zshrc
 mkdir -p ~/.zsh
 ln -sf $DIR/zsh/* ~/.zsh/
 
+# pryrc symlinking
+ln -sf $DIR/pryrc ~/.pryrc
+
 # git symlinking
 ln -sf $DIR/gitconfig ~/.gitconfig
 ln -sf $DIR/gitignore_global ~/.gitignore_global

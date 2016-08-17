@@ -1,20 +1,28 @@
 #!/bin/bash
 
-cd $HOME/dev/reverb
-tmux new -s reverb -d
-tmux send-keys -t reverb 'vagrant up; tmux wait-for -S getting-to-work' C-m\; wait-for getting-to-work
-tmux rename-window -t reverb vim
-tmux send-keys -t reverb 'vim' C-m
+#!/bin/bash
 
-tmux split-window -v -t reverb
-tmux new-window -t reverb
-tmux rename-window -t reverb other
-tmux send-keys -t reverb './bin/foreman s' C-m
-tmux split-window -v -t reverb
-tmux send-keys -t reverb 'zeus start' C-m
-tmux split-window -h -t reverb
-tmux select-pane -t reverb -U
-tmux split-window -h -t reverb
-tmux send-keys -t reverb 'vagrant ssh -c "service worker stop && exit"; ./bin/sidekiq' C-m
-tmux select-window -t reverb:1
-tmux attach -t reverb
+SESSION=reverb
+cd $HOME/dev/$SESSION
+tmux new -s $SESSION -d
+echo 'starting vagrant'
+tmux send-keys -t $SESSION 'vagrant up; tmux wait-for -S getting-to-work' C-m\; wait-for getting-to-work
+echo 'renaming window'
+tmux rename-window -t $SESSION vim
+tmux send-keys -t $SESSION 'vim' C-m
+echo 'starting vim'
+tmux split-window -v -t $SESSION
+
+tmux new-window -t $SESSION
+tmux rename-window -t $SESSION other
+tmux send-keys -t $SESSION './script/server' C-m
+tmux split-window -v -t $SESSION
+tmux send-keys -t $SESSION 'zeus start' C-m
+tmux split-window -h -t $SESSION
+tmux send-keys -t $SESSION 'npm run dev' C-m
+tmux select-pane -t $SESSION -U
+tmux split-window -h -t $SESSION
+tmux send-keys -t $SESSION 'vagrant ssh -c "service worker stop && exit"; ./bin/sidekiq' C-m
+
+tmux select-window -t $SESSION:1
+tmux attach -t $SESSION

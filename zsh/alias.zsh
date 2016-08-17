@@ -88,3 +88,4 @@ alias zc='zeus console'
 
 alias :q='exit'
 alias be='bundle exec'
+alias ss='stty sane'

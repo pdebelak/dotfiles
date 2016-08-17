@@ -1,4 +1,5 @@
 " from https://github.com/ebenoist/dotfiles
+colo tomorrow
 syntax on                                  " Turn on syntax highlighting
 filetype on
 filetype indent on
@@ -68,7 +69,6 @@ set undoreload=10000
 "-------------------------------------------------
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
-hi Search ctermbg=11 ctermfg=White         " Fix searching colors
 
 " use silver searcher for ack if available
 if executable('ag')
@@ -76,11 +76,7 @@ if executable('ag')
 endif
 
 " set theme
-if !has("gui_running")
-  set background=light
-else
-  set background=dark
-endif
+set background=light
 
 " no whitespace on save
 autocmd BufWritePre * :StripTrailingWhitespaces

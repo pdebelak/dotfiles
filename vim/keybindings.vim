@@ -9,7 +9,7 @@ source ~/.vim/keybindings/nerdstuff.vim
 
 xnoremap <leader>cp <esc>:'<,'>:w !pbcopy<CR><CR>
 
-autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc', '.;') != '' ? ['eslint'] : ['jshint']
+autocmd FileType javascript let b:syntastic_checkers = findfile('.eslintrc.js', '.;') != '' ? ['eslint'] : ['jshint']
 
 nnoremap <silent> ,gcc :! ctags -R .<CR><CR>
 
@@ -52,3 +52,6 @@ nnoremap <silent> ,f <C-]>
 " ============================
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
+
+abbr pry require 'pry'; binding.pry
+abbr r attr_writer :
