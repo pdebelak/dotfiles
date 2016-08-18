@@ -85,5 +85,7 @@ autocmd BufWritePre * :StripTrailingWhitespaces
 autocmd BufNewFile,BufRead *.md setlocal wrap
 autocmd BufRead,BufNewFile *.md setlocal spell
 
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
 " xmpfilter
 let g:xmpfilter_cmd = "seeing_is_believing"
