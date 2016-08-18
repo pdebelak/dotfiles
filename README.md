@@ -1,9 +1,10 @@
 # Env configuration
 
-This is my custom shell configuration. It is meant to be used along with [yadr](https://github.com/skwp/dotfiles).
+This is my custom shell configuration.
 
 ## Instructions
 
-1. clone this repo
-2. `./symlink.sh`
-3. `./install_plugins.sh`
+1. Install [oh my zsh](https://github.com/robbyrussell/oh-my-zsh#readme)
+2. clone this repo
+3. `./symlink.sh`
+4. `./install_plugins.sh`
