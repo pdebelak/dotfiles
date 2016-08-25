@@ -2,18 +2,14 @@ if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
 
-if executable('ag')
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command =
-    \ 'ag %s --files-with-matches -g "" --ignore "\.git$\|\.hg$\|\.svn$"'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-else
-  " Fall back to using git ls-files if Ag is not available
-  let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
-  let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
-endif
+let g:ctrlp_user_command = {
+  \ 'types': {
+    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others | sed "/Godeps/d"'],
+  \ },
+  \ 'fallback': 'find %s -type f'
+\ }
+let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_clear_cache_on_exit = 1
 
 " Default to filename searches - so that appctrl will find application
 " controller
@@ -25,11 +21,11 @@ let g:ctrlp_switch_buffer = 0
 
 " We don't want to use Ctrl-p as the mapping because
 " it interferes with YankRing (paste, then hit ctrl-p)
-let g:ctrlp_map = ',t'
-nnoremap <silent> ,t :CtrlP<CR>
+let g:ctrlp_map = '<Leader>t'
+nnoremap <silent> <Leader>t :CtrlP<CR>
 
 " Additional mapping for buffer search
-nnoremap <silent> ,b :CtrlPBuffer<cr>
+nnoremap <silent> <Leader>b :CtrlPBuffer<cr>
 
 " Cmd-Shift-P to clear the cache
 nnoremap <silent> <D-P> :ClearCtrlPCache<cr>
