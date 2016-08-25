@@ -2,13 +2,8 @@ if exists("g:ctrlp_user_command")
   unlet g:ctrlp_user_command
 endif
 
-let g:ctrlp_user_command = {
-  \ 'types': {
-    \ 1: ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others | sed "/Godeps/d"'],
-  \ },
-  \ 'fallback': 'find %s -type f'
-\ }
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files . --cached --exclude-standard --others']
 let g:ctrlp_clear_cache_on_exit = 1
 
 " Default to filename searches - so that appctrl will find application
