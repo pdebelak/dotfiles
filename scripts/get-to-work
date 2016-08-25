@@ -9,9 +9,6 @@ tmux send-keys -t $SESSION 'vim' C-m
 tmux split-window -v -t $SESSION
 
 tmux new-window -t $SESSION
-tmux rename-window -t $SESSION working
-
-tmux new-window -t $SESSION
 tmux rename-window -t $SESSION other
 tmux send-keys -t $SESSION './script/server' C-m
 tmux split-window -v -t $SESSION
