@@ -3,6 +3,7 @@
 	email = pdebelak@gmail.com
 [core]
 	excludesfile = /Users/pdebelak/.gitignore_global
+  pager = "less -F -X"
 [color]
   ui = true
 [color "branch"]
