@@ -53,3 +53,7 @@ nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
 abbr pry require 'pry'; binding.pry
+
+if has('nvim')
+  tnoremap <Esc> <C-\><C-n>
+end
