@@ -18,7 +18,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-fugitive'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'skwp/YankRing.vim'
 Plugin 'skwp/vim-spec-finder'
 Plugin 'tpope/vim-endwise'
@@ -29,6 +28,7 @@ Plugin 'ecomba/vim-ruby-refactoring'
 Plugin 'kana/vim-textobj-user'
 Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'mxw/vim-jsx'
+Plugin 'neomake/neomake'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

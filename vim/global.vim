@@ -17,7 +17,9 @@ set ruler                                  " Show ruler
 set number                                 " Show line numbers
 set vb t_vb=                               " Turn off bell
 set mouse=a                                " Enable the mouse
-set ttymouse=xterm2
+if !has('nvim')
+	set ttymouse=xterm2
+endif
 set linespace=3                            " Spacing between lines
 set noswapfile                             " Disable creation of *.swp files
 set autoread                               " Autoload files

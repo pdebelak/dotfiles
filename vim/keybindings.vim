@@ -6,10 +6,9 @@ source ~/.vim/keybindings/tabs-and-splits.vim
 source ~/.vim/keybindings/ctrlp.vim
 source ~/.vim/keybindings/search.vim
 source ~/.vim/keybindings/nerdstuff.vim
+source ~/.vim/keybindings/neomake.vim
 
 xnoremap <leader>cp <esc>:'<,'>:w !pbcopy<CR><CR>
-
-let g:syntastic_javascript_checkers = ['eslint']
 
 nnoremap <silent> ,gcc :! ctags -R .<CR><CR>
 

@@ -7,6 +7,12 @@ ln -sf $DIR/vimrc ~/.vimrc
 mkdir -p ~/.vim
 ln -sf $DIR/vim/* ~/.vim/
 
+# nvim symlinking
+mkdir -p ~/.config
+mkdir -p ~/.config/nvim
+ln -sf $DIR/vimrc ~/.config/nvim/init.vim
+ln -sf $DIR/vim/* ~/.config/nvim/
+
 # zsh symlinking
 ln -sf $DIR/zshrc ~/.zshrc
 mkdir -p ~/.zsh

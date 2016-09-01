@@ -16,7 +16,9 @@ tat() {
 }
 
 # vim
-alias vim='mvim -v'
+if type nvim > /dev/null 2>&1; then
+  alias vim='nvim'
+fi
 
 # git aliases taken from yadr
 alias gs='git status'
