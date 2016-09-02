@@ -30,6 +30,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'mxw/vim-jsx'
 Plugin 'neomake/neomake'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'Shougo/deoplete.nvim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

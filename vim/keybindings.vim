@@ -7,6 +7,7 @@ source ~/.vim/keybindings/ctrlp.vim
 source ~/.vim/keybindings/search.vim
 source ~/.vim/keybindings/nerdstuff.vim
 source ~/.vim/keybindings/neomake.vim
+source ~/.vim/keybindings/deoplete.vim
 
 xnoremap <leader>cp <esc>:'<,'>:w !pbcopy<CR><CR>
 

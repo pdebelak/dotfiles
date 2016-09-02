@@ -11,7 +11,8 @@ This is my custom shell configuration.
 
 ## Dependencies
 
-This is not an exhaustive list (since I don't remeber everything I've installed). Note: Remember to update this with everything you need to install if you get a new computer!
+This is not an exhaustive list (since I don't remember everything I've installed). Note: Remember to update this with everything you need to install if you get a new computer!
 
 1. [nvim](https://github.com/neovim/neovim) - not strictly needed but some mappings are for that
 2. [ag](https://github.com/ggreer/the_silver_searcher) - used for searching if available
+3. python3 (brew install python3 && pip3 install neovim) - needed for [deoplete](https://github.com/Shougo/deoplete.nvim) plugin
