@@ -10,8 +10,8 @@ let g:ctrlp_clear_cache_on_exit = 1
 " controller
 let g:ctrlp_by_filename = 1
 
-" Don't jump to already open window. This is annoying if you are maintaining
-" several Tab workspaces and want to open two windows into the same file.
+" Don't jump to already open window. This is annoying if you are
+" maintaining several Tab workspaces and want to open two windows into the same file.
 let g:ctrlp_switch_buffer = 0
 
 " We don't want to use Ctrl-p as the mapping because
@@ -25,9 +25,11 @@ nnoremap <silent> <Leader>b :CtrlPBuffer<cr>
 " Cmd-Shift-P to clear the cache
 nnoremap <silent> <Leader>pp :ClearCtrlPCache<cr>
 
-" Idea from : http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
+" Idea from :
+" http://www.charlietanksley.net/blog/blog/2011/10/18/vim-navigation-with-lustyexplorer-and-lustyjuggler/
 " Open CtrlP starting from a particular path, making it much
-" more likely to find the correct thing first. mnemonic 'jump to [something]'
+" more likely to find the correct thing first. mnemonic 'jump to
+" [something]'
 map <Leader>ja :CtrlP app/assets<CR>
 map <Leader>jm :CtrlP app/models<CR>
 map <Leader>jc :CtrlP app/controllers<CR>
