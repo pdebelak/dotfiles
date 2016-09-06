@@ -86,6 +86,7 @@ autocmd BufWritePre * :StripTrailingWhitespaces
 " markdown conveniences
 autocmd BufNewFile,BufRead *.md setlocal wrap
 autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
