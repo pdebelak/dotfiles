@@ -11,8 +11,17 @@ This is my custom shell configuration.
 
 ## Dependencies
 
-This is not an exhaustive list (since I don't remember everything I've installed). Note: Remember to update this with everything you need to install if you get a new computer!
+This is not an exhaustive list (since I don't remember everything I've
+    installed). Note: Remember to update this with everything you need to
+install if you get a new computer!
 
-1. [nvim](https://github.com/neovim/neovim) - not strictly needed but some mappings are for that
-2. [ag](https://github.com/ggreer/the_silver_searcher) - used for searching if available
-3. python3 (brew install python3 && pip3 install neovim) - needed for [deoplete](https://github.com/Shougo/deoplete.nvim) plugin
+1. [nvim](https://github.com/neovim/neovim) - not strictly needed but some
+   mappings are for that
+2. [ag](https://github.com/ggreer/the_silver_searcher) - used for searching if
+   available
+3. [fasd](https://github.com/clvv/fasd) - not necessarily needed, but I can't
+   live without the `z` shortcut for fast fuzzy cding
+4. python3 (brew install python3 && pip3 install neovim) - needed for
+   [deoplete](https://github.com/Shougo/deoplete.nvim) autocomplete plugin
+5. [fzf](https://github.com/junegunn/fzf) for fuzzy file searching in vim
+   (similar to ctrlp)
