@@ -6,5 +6,5 @@ nnoremap <Leader>nn :execute "normal <C-w>=" <bar> :resize 20<CR>
 nnoremap <Leader>zc :T zeus console<CR>
 
 if has('nvim')
-  tnoremap <Esc><Esc> <C-\><C-n>
+  tnoremap <Leader><Esc> <C-\><C-n>
 end
