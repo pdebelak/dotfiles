@@ -98,3 +98,5 @@
   # instead of a/b/c/d as prefixes for patches
   mnemonicprefix = true
   algorithm = patience
+[credential]
+	helper = osxkeychain
