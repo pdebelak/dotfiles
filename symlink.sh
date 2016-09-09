@@ -25,6 +25,9 @@ ln -sf $DIR/pryrc ~/.pryrc
 ln -sf $DIR/gitconfig ~/.gitconfig
 ln -sf $DIR/gitignore_global ~/.gitignore_global
 
+# aginore symlinking
+ln -sf $DIR/agignore ~/.agignore
+
 # tmux symlinking
 ln -sf $DIR/tmux.conf ~/.tmux.conf
 

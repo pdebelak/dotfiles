@@ -94,3 +94,6 @@ alias zc='zeus console'
 alias :q='exit'
 alias be='bundle exec'
 alias ss='stty sane'
+
+# use agignore for silver searcher
+alias ag='ag --path-to-agignore ~/.agignore'
