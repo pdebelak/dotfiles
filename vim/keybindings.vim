@@ -1,4 +1,5 @@
 let mapleader = ","
+let maplocalleader = " "
 
 source ~/.vim/keybindings/specs.vim
 source ~/.vim/keybindings/tabs-and-splits.vim
@@ -48,4 +49,4 @@ nnoremap <silent> ,f <C-]>
 nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
-abbr pry require 'pry'; binding.pry
+autocmd FileType ruby :iabbr pry require 'pry'; binding.pry<Esc>F%s<C-o>:call getchar()<CR>

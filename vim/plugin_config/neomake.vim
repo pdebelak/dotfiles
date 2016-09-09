@@ -10,3 +10,7 @@ let g:neomake_error_sign = {
   \ 'text': '>>',
   \ 'texthl': 'ErrorMsg',
   \ }
+
+if has('nvim')
+  tnoremap <C-q> <C-\><C-n>
+endif
