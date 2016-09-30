@@ -9,6 +9,8 @@ xnoremap <leader>cp <esc>:'<,'>:w !pbcopy<CR><CR>
 
 nnoremap <silent> ,gcc :! ctags -R .<CR><CR>
 
+nnoremap <Localleader>fi :call FillInIvars()<CR>
+
 " These mappings are from https://github.com/skwp/dotfiles
 nnoremap ,ow "_diwhp
 
