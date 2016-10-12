@@ -10,7 +10,7 @@ until dev/docker/exec db psql -U postgres -h localhost -c "select 1" > /dev/null
 tmux split-window -v -t $SESSION
 tmux send-keys -t $SESSION 'npm run dev' C-m
 tmux split-window -h -t $SESSION
-tmux send-keys -t $SESSION './bin/sidekiq > /dev/null 2>&1' C-m
+tmux send-keys -t $SESSION './bin/sidekiq' C-m
 tmux select-pane -t $SESSION -U
 tmux split-window -h -t $SESSION
 tmux send-keys -t $SESSION 'nginx -c nginx.dev.conf -p ./' C-m
