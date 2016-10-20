@@ -29,6 +29,7 @@ Plug 'kassio/neoterm'
 Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'zchee/deoplete-go', {'do': 'make', 'for': 'go'}
 Plug 'vim-scripts/AutoTag'
+Plug 'joukevandermaas/vim-ember-hbs'
 
 " All of your Plugins must be added before the following line
 call plug#end()
