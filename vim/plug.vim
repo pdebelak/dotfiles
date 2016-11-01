@@ -14,6 +14,7 @@ Plug 'skwp/YankRing.vim'
 Plug 'skwp/vim-spec-finder'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
+Plug 'tpope/vim-bundler', { 'for': 'ruby' }
 Plug 'vim-ruby/vim-ruby', { 'for': 'ruby' }
 Plug 'AndrewRadev/splitjoin.vim'
 Plug 'ecomba/vim-ruby-refactoring', { 'for': 'ruby' }
