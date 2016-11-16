@@ -2,6 +2,9 @@
 
 DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+# hyper symlink
+ln -sf $DIR/hyper.js ~/.hyper.js
+
 # vim symlinking
 ln -sf $DIR/vimrc ~/.vimrc
 mkdir -p ~/.vim
