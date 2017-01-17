@@ -90,5 +90,7 @@ autocmd BufRead,BufNewFile *.md setlocal textwidth=80
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 
+autocmd FileType python setlocal colorcolumn=80
+
 " xmpfilter
 let g:xmpfilter_cmd = "seeing_is_believing"
