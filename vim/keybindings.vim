@@ -52,3 +52,4 @@ nmap sj :SplitjoinSplit<cr>
 nmap sk :SplitjoinJoin<cr>
 
 autocmd FileType ruby :iabbr pry require 'pry'; binding.pry<Esc>F%s<C-o>:call getchar()<CR>
+autocmd FileType python :iabbr pdb import pdb; pdb.set_trace()<Esc>F%s<C-o>:call getchar()<CR>
