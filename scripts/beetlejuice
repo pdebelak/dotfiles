@@ -1,2 +1,10 @@
 #!/bin/bash
-"$@" && "$@" && "$@"
+
+
+if [ $# -eq 0 ]; then
+  read ARGS
+else
+  ARGS="$@"
+fi
+
+$ARGS && $ARGS && $ARGS
