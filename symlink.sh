@@ -33,3 +33,8 @@ ln -sf $DIR/tmux.conf ~/.tmux.conf
 
 # script symlinking
 ln -sf $DIR/scripts/* ~/bin/
+
+# emacs symlinking
+ln -sf $DIR/emacs ~/.emacs
+mkdir -p ~/.emacs.d
+ln -sf $DIR/emacs.d/* ~/.emacs.d/
