@@ -12,7 +12,7 @@
   :ensure t)
 
 (use-package helm-projectile
-  :ensure t :bind (("C-x C-g" . helm-projectile-ag)))
+  :ensure t :bind (("C-x g g" . helm-projectile-ag)))
 
 (global-set-key (kbd "C-x C-f") 'find-file-smart-helm)
 
