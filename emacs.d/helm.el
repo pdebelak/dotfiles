@@ -8,8 +8,11 @@
   :ensure t :bind (("M-x" . helm-M-x)
 		   ("C-x g C-f" . helm-find-files)))
 
-(use-package helm-projectile
+(use-package helm-ag
   :ensure t)
+
+(use-package helm-projectile
+  :ensure t :bind (("C-x C-g" . helm-projectile-ag)))
 
 (global-set-key (kbd "C-x C-f") 'find-file-smart-helm)
 
