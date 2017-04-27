@@ -8,7 +8,7 @@ tmux split-window -v -t $SESSION
 tmux send-keys -t $SESSION './dev/docker/up' C-m
 until dev/docker/exec db psql -U postgres -h localhost -c "select 1" > /dev/null 2>&1; do sleep 2; done
 tmux split-window -v -t $SESSION
-tmux send-keys -t $SESSION 'npm run dev' C-m
+tmux send-keys -t $SESSION 'yarn run dev' C-m
 tmux split-window -h -t $SESSION
 tmux send-keys -t $SESSION './bin/sidekiq' C-m
 tmux select-pane -t $SESSION -U
