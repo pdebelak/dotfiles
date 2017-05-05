@@ -13,3 +13,11 @@ export NVM_DIR="/Users/pdebelak/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH=node_modules/.bin:$PATH
+
+echo "        __      __
+.-----.|  |_.--|  |
+|  _  ||   _|  _  |
+|   __||____|_____|
+|__|
+
+Start computerin'"
