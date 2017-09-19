@@ -27,6 +27,7 @@ set tags+=tags                             " Set ctags
 set tags+=.tags
 set tags+=.gemtags                         " Set ctags
 set clipboard=unnamed                      " Set system clipboard
+set lazyredraw                             " Don't redraw until function/macro completes
 scriptencoding utf-8
 
 " INDENTATION
