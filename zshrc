@@ -1,5 +1,10 @@
 source ~/.zsh/oh-my-zsh
-source $HOME/.rvm/scripts/rvm
+if [ -f "$HOME/.rvm/scripts/rvm" ]; then
+  source $HOME/.rvm/scripts/rvm
+fi
+if [ -f "/usr/share/rvm/scripts/rvm" ]; then
+  source /usr/share/rvm/scripts/rvm
+fi
 export PATH=$(yarn global bin):$PATH
 export PATH=bin/node_modules:$PATH
 for config_file ($HOME/.zsh/*.zsh) source $config_file
@@ -9,9 +14,6 @@ for config_file ($HOME/.zsh/*.zsh) source $config_file
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
-export NVM_DIR="/Users/pdebelak/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 
 export PATH=node_modules/.bin:$PATH
 

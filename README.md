@@ -15,13 +15,15 @@ This is not an exhaustive list (since I don't remember everything I've
     installed). Note: Remember to update this with everything you need to
 install if you get a new computer!
 
-1. [nvim](https://github.com/neovim/neovim) - not strictly needed but some
+1. [rvm](https://rvm.io/rvm/install) - for managing ruby
+2. [yarn](https://yarnpkg.com/lang/en/docs/install/) - for javascript
+2. [nvim](https://github.com/neovim/neovim) - not strictly needed but some
    mappings are for that
-2. [ag](https://github.com/ggreer/the_silver_searcher) - used for searching if
+3. [ag](https://github.com/ggreer/the_silver_searcher) - used for searching if
    available
-3. [fasd](https://github.com/clvv/fasd) - not necessarily needed, but I can't
+4. [fasd](https://github.com/clvv/fasd) - not necessarily needed, but I can't
    live without the `z` shortcut for fast fuzzy cding
-4. python3 (brew install python3 && pip3 install neovim) - needed for
+5. python3 (brew install python3 && pip3 install neovim) - needed for
    [deoplete](https://github.com/Shougo/deoplete.nvim) autocomplete plugin
-5. [fzf](https://github.com/junegunn/fzf) for fuzzy file searching in vim
+6. [fzf](https://github.com/junegunn/fzf) for fuzzy file searching in vim
    (similar to ctrlp)
