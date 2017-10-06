@@ -31,6 +31,10 @@ Plug 'fatih/vim-go', {'for': 'go'}
 Plug 'zchee/deoplete-go', {'do': 'make', 'for': 'go'}
 Plug 'vim-scripts/AutoTag'
 Plug 'joukevandermaas/vim-ember-hbs'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'tomtom/tlib_vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 
