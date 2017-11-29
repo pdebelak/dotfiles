@@ -37,6 +37,7 @@ Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
+Plug 'rust-lang/rust.vim', {'for': 'rust'}
 
 " All of your Plugins must be added before the following line
 call plug#end()
