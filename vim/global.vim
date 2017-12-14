@@ -73,11 +73,6 @@ set undoreload=10000
 set ignorecase                             " Ignore case by default when searching
 set smartcase                              " Switch to case sensitive mode if needle contains uppercase characters
 
-" use silver searcher for ack if available
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
-
 " set theme
 set background=light
 

@@ -19,7 +19,7 @@ install if you get a new computer!
 2. [yarn](https://yarnpkg.com/lang/en/docs/install/) - for javascript
 2. [nvim](https://github.com/neovim/neovim) - not strictly needed but some
    mappings are for that
-3. [ag](https://github.com/ggreer/the_silver_searcher) - used for searching if
+3. [ripgrep](https://github.com/BurntSushi/ripgrep) - used for searching if
    available
 4. [fasd](https://github.com/clvv/fasd) - not necessarily needed, but I can't
    live without the `z` shortcut for fast fuzzy cding

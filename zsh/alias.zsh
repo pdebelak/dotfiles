@@ -97,3 +97,6 @@ alias ss='stty sane'
 
 # use agignore for silver searcher
 alias ag='ag --path-to-agignore ~/.agignore'
+#
+# use agignore for ripgrep
+alias rg='rg --ignore-file ~/.agignore'
