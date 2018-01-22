@@ -38,3 +38,6 @@ ln -sf $DIR/scripts/* ~/bin/
 ln -sf $DIR/emacs ~/.emacs
 mkdir -p ~/.emacs.d
 ln -sf $DIR/emacs.d/* ~/.emacs.d/
+
+# guile symlinking
+ln -sf $DIR/guile ~/.guile
