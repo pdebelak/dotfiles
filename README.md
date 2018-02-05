@@ -27,3 +27,4 @@ install if you get a new computer!
    [deoplete](https://github.com/Shougo/deoplete.nvim) autocomplete plugin
 6. [fzf](https://github.com/junegunn/fzf) for fuzzy file searching in vim
    (similar to ctrlp)
+7. flake8 (pip install flake8) - used in python files for linting

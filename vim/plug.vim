@@ -39,6 +39,7 @@ Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'rhysd/vim-crystal'
+Plug 'nvie/vim-flake8', {'for': 'python'}
 
 " All of your Plugins must be added before the following line
 call plug#end()
