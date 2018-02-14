@@ -33,3 +33,7 @@ function! <SID>StripTrailingWhitespaces()
     call cursor(l, c)
 endfunction
 command! StripTrailingWhitespaces call <SID>StripTrailingWhitespaces()
+
+function MakeExecutable()
+  execute "silent exec \"! chmod +x %\""
+endfunction
