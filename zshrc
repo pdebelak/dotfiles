@@ -5,7 +5,9 @@ fi
 if [ -f "/usr/share/rvm/scripts/rvm" ]; then
   source /usr/share/rvm/scripts/rvm
 fi
-export PATH=$(yarn global bin):$PATH
+if yarn global bin > /dev/null 2>&1; then
+  export PATH=$(yarn global bin):$PATH
+fi
 export PATH=bin/node_modules:$PATH
 for config_file ($HOME/.zsh/*.zsh) source $config_file
 
