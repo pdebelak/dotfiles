@@ -1,4 +1,4 @@
-let g:neoterm_position = 'horizontal'
+let g:neoterm_default_mod = 'botright'
 let g:neoterm_size = 20
 
 nnoremap <Leader>nz <C-w>_<CR>
