@@ -36,6 +36,7 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
+Plug 'mhartington/nvim-typescript', {'for': 'typescript', 'do': ':UpdateRemotePlugins'}
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
 Plug 'rhysd/vim-crystal'
