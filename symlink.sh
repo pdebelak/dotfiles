@@ -21,6 +21,7 @@ ln -sf $DIR/bash/* ~/.bash/
 
 # pryrc symlinking
 ln -sf $DIR/pryrc ~/.pryrc
+ln -sf $DIR/irbrc ~/.irbrc
 
 # git symlinking
 ln -sf $DIR/gitconfig ~/.gitconfig
