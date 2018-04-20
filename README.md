@@ -4,27 +4,28 @@ This is my custom shell configuration.
 
 ## Instructions
 
-1. Install [oh my zsh](https://github.com/robbyrussell/oh-my-zsh#readme)
-2. clone this repo
-3. `./symlink.sh`
-4. `./install_plugins.sh`
+1. clone this repo
+2. `./symlink.sh`
+3. `./install_plugins.sh`
 
 ## Dependencies
 
 This is not an exhaustive list (since I don't remember everything I've
-    installed). Note: Remember to update this with everything you need to
+installed). Note: Remember to update this with everything you need to
 install if you get a new computer!
 
-1. [rvm](https://rvm.io/rvm/install) - for managing ruby
-2. [yarn](https://yarnpkg.com/lang/en/docs/install/) - for javascript
-2. [nvim](https://github.com/neovim/neovim) - not strictly needed but some
+1. [rbenv](https://github.com/rbenv/rbenv#installation) - for managing ruby
+2. [yarn](https://yarnpkg.com/lang/en/docs/install/) - for javascript. You
+	 can name this `yarnpkg` so it doesn't conflict with the hadoop yarn and
+	 things should work as expected.
+3. [nvim](https://github.com/neovim/neovim) - not strictly needed but some
    mappings are for that
-3. [ripgrep](https://github.com/BurntSushi/ripgrep) - used for searching if
+4. [ripgrep](https://github.com/BurntSushi/ripgrep) - used for searching if
    available
-4. [fasd](https://github.com/clvv/fasd) - not necessarily needed, but I can't
+5. [fasd](https://github.com/clvv/fasd) - not necessarily needed, but I can't
    live without the `z` shortcut for fast fuzzy cding
-5. python3 (brew install python3 && pip3 install neovim) - needed for
+6. python3 (brew install python3 && pip3 install neovim) - needed for
    [deoplete](https://github.com/Shougo/deoplete.nvim) autocomplete plugin
-6. [fzf](https://github.com/junegunn/fzf) for fuzzy file searching in vim
+7. [fzf](https://github.com/junegunn/fzf) for fuzzy file searching in vim
    (similar to ctrlp)
-7. flake8 (pip install flake8) - used in python files for linting
+8. flake8 (pip3 install flake8) - used in python files for linting

@@ -13,10 +13,11 @@ mkdir -p ~/.config/nvim
 ln -sf $DIR/vimrc ~/.config/nvim/init.vim
 ln -sf $DIR/vim/* ~/.config/nvim/
 
-# zsh symlinking
-ln -sf $DIR/zshrc ~/.zshrc
-mkdir -p ~/.zsh
-ln -sf $DIR/zsh/* ~/.zsh/
+# bash symlinking
+ln -sf $DIR/bashrc ~/.bashrc
+ln -sf $DIR/bash_profile ~/.bash_profile
+mkdir -p ~/.bash
+ln -sf $DIR/bash/* ~/.bash/
 
 # pryrc symlinking
 ln -sf $DIR/pryrc ~/.pryrc
