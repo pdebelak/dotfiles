@@ -1,14 +1,11 @@
 if yarn global bin > /dev/null 2>&1; then
   export PATH=$(yarn global bin):$PATH
-fi
-if yarnpkg global bin > /dev/null 2>&1; then
+elif yarnpkg global bin > /dev/null 2>&1; then
   export PATH=$(yarnpkg global bin):$PATH
 fi
 for config_file in $HOME/.bash/*.sh; do
   source $config_file
 done
-
-[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 export PATH=node_modules/.bin:$PATH
 
