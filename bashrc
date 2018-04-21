@@ -15,7 +15,7 @@ function parse_git_dirty {
 function parse_git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/‹\1$(parse_git_dirty)› /"
 }
-export PS1='\e[0;32m\h\033[0m \w \e[0;33m$(parse_git_branch)\e[1;30m»\e[0;30m '
+export PS1='\[\e[0;32m\]\h\[\033[0m\] \w \[\e[0;33m\]$(parse_git_branch)\[\e[1;30m\]»\[\e[0;30m\] '
 
 if type rbenv > /dev/null 2>&1; then
   eval "$(rbenv init -)"
