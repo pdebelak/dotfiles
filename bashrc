@@ -21,6 +21,10 @@ if type rbenv > /dev/null 2>&1; then
   eval "$(rbenv init -)"
 fi
 
+if [ -f ~/.zprofile ]; then
+  source ~/.zprofile
+fi
+
 echo "        __      __
 .-----.|  |_.--|  |
 |  _  ||   _|  _  |
