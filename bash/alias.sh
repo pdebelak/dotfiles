@@ -100,3 +100,5 @@ alias ag='ag --path-to-agignore ~/.agignore'
 #
 # use agignore for ripgrep
 alias rg='rg --ignore-file ~/.agignore'
+
+alias z='fasd_cd -d'
