@@ -102,3 +102,4 @@ alias ag='ag --path-to-agignore ~/.agignore'
 alias rg='rg --ignore-file ~/.agignore'
 
 alias z='fasd_cd -d'
+alias ed='ed -p"* "'
