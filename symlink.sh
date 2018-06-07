@@ -19,9 +19,10 @@ ln -sf $DIR/bash_profile ~/.bash_profile
 mkdir -p ~/.bash
 ln -sf $DIR/bash/* ~/.bash/
 
-# pryrc symlinking
+# other .rc symlinking
 ln -sf $DIR/pryrc ~/.pryrc
 ln -sf $DIR/irbrc ~/.irbrc
+ln -sf $DIR/sqliterc ~/.sqliterc
 
 # git symlinking
 ln -sf $DIR/gitconfig ~/.gitconfig
