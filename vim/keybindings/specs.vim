@@ -1,4 +1,13 @@
-nnoremap <Leader>sv :RelatedSpecVOpen<CR>
+function RelatedSpecVerticalOpen()
+  let l:spec_path = g:RelatedSpecOrFile()
+  if filereadable(l:spec_path)
+    execute "vsp %"
+    execute "normal! \<C-w>l"
+    execute "e " . l:spec_path
+  endif
+endfunction
+
+nnoremap <Leader>sv :call RelatedSpecVerticalOpen()<CR>
 
 if has('nvim')
   autocmd FileType ruby nnoremap <Leader>rl :execute "T " . RSpecLine()<CR>

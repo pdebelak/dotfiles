@@ -11,7 +11,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'skwp/YankRing.vim'
-Plug 'skwp/vim-spec-finder'
+Plug 'pdebelak/vim-spec-finder'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails', { 'for': 'ruby' }
 Plug 'tpope/vim-bundler', { 'for': 'ruby' }
