@@ -1,3 +1,4 @@
+export PATH=$HOME/.local/bin:$PATH
 if yarn global bin > /dev/null 2>&1; then
   export PATH=$(yarn global bin):$PATH
 elif yarnpkg global bin > /dev/null 2>&1; then
@@ -8,6 +9,7 @@ for config_file in $HOME/.bash/*.sh; do
 done
 
 export PATH=node_modules/.bin:$PATH
+export PATH="$HOME/.cargo/bin:$PATH"
 
 function parse_git_dirty {
   [[ $(git status --short 2> /dev/null) != "" ]] && echo "*"
