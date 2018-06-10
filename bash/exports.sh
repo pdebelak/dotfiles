@@ -8,3 +8,6 @@ export EDITOR='vim'
 if type nvim > /dev/null 2>&1; then
   export EDITOR='nvim'
 fi
+if type rustup > /dev/null 2>&1; then
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+fi

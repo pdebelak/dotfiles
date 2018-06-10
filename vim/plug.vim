@@ -39,6 +39,7 @@ Plug 'leafgarland/typescript-vim', {'for': 'typescript'}
 Plug 'mhartington/nvim-typescript', {'for': 'typescript', 'do': ':UpdateRemotePlugins'}
 Plug 'derekwyatt/vim-scala', {'for': 'scala'}
 Plug 'rust-lang/rust.vim', {'for': 'rust'}
+Plug 'racer-rust/vim-racer', {'for': 'rust'}
 Plug 'rhysd/vim-crystal'
 Plug 'nvie/vim-flake8', {'for': 'python'}
 
