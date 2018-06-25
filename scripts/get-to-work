@@ -17,7 +17,6 @@ tmux send-keys -t $SESSION 'nginx -c nginx.dev.conf -p ./' C-m
 tmux select-pane -t $SESSION -U
 tmux send-keys -t $SESSION './bin/rails s -b 127.0.0.1' C-m
 tmux split-window -h -t $SESSION
-tmux send-keys -t $SESSION 'zeus start' C-m
 
 tmux select-window -t $SESSION:1
 tmux attach -t $SESSION
