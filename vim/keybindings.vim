@@ -32,7 +32,7 @@ endfunction
 nnoremap <silent> ,z :bp<CR>
 nnoremap <silent> ,x :bn<CR>
 
-nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
+nnoremap <silent> <leader>cf :let @* = expand("%:~")<CR>
 
 " These are very similar keys. Typing 'a will jump to the line in the current
 " file marked with ma. However, `a will jump to the line and column marked
@@ -44,7 +44,7 @@ nnoremap ` '
 
 " hit ,f to find the definition of the current class
 " this uses ctags. the standard way to get this is Ctrl-]
-nnoremap <silent> ,f <C-]>
+nnoremap <silent> <leader>f <C-]>
 
 " ============================
 " SplitJoin plugin
