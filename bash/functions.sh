@@ -4,3 +4,12 @@ google () {
 }
 
 alias goog='google'
+
+venv () {
+  venv_loc=${1:-venv}
+  if [ -d "$venv_loc" ]; then
+    source $venv_loc/bin/activate
+  else
+    echo "No directory $venv_loc found"
+  fi
+}
