@@ -103,3 +103,6 @@ alias rg='rg --ignore-file ~/.agignore'
 
 alias z='fasd_cd -d'
 alias ed='ed -p"* "'
+
+# open emacs in terminal
+alias emacs='emacs -nw'
