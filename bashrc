@@ -1,3 +1,4 @@
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 export PATH=$HOME/.local/bin:$PATH
 if yarn global bin > /dev/null 2>&1; then
   export PATH=$(yarn global bin):$PATH

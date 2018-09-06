@@ -38,7 +38,6 @@ ln -sf $DIR/tmux.conf ~/.tmux.conf
 ln -sf $DIR/scripts/* ~/bin/
 
 # emacs symlinking
-ln -sf $DIR/emacs ~/.emacs
 mkdir -p ~/.emacs.d
 ln -sf $DIR/emacs.d/* ~/.emacs.d/
 
