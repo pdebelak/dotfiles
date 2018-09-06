@@ -1,0 +1,43 @@
+* Movement
+- C-b back one
+- C-f forward one
+- C-p up one
+- C-n down one
+- M-b back one word
+- M-f forward one word
+- C-a beginning of line
+- C-e end of line
+- M-m back to beginning of non-whitespace
+- M-< beginning of buffer
+- M-> end of buffer
+- C-v page down
+- M-v page up
+* Killing/deleting
+- C-d delete under cursor
+- C-k kill to end of line
+- C-w backwords kill word
+- C-x C-k kill-region
+- C-SPC set mark (so you can select a region)
+- C-y yank
+* Other editing commands
+- C-/ undo
+* Special modes
+** Shell
+- M-x shell
+** Term
+- M-x term
+- C-c C-j switch to line mode (means emacs commands work)
+- C-c C-k switch char mode (means works like a terminal)
+** Org
+- Tab expands or collapses a level
+* Buffers
+- C-x C-f open file
+- C-x b switch buffer
+- C-x 3 vertical split
+- C-x 2 horizontal split
+- C-x 1 close all other splits
+- C-x 0 close this split
+- C-x k kill buffer
+- C-x C-s save buffer
+* General commands
+- C-x C-c quit
