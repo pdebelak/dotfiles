@@ -15,13 +15,17 @@
 * Killing/deleting
 - C-d delete under cursor
 - C-k kill to end of line
+- M-d kill word
 - C-w backwords kill word
 - C-x C-k kill-region
 - C-SPC set mark (so you can select a region)
 - C-y yank
 * Other editing commands
 - C-/ undo
+- Movement + C-/ will redo and undo (it's strange)
 - M-q fill-current-paragraph
+- C-x C-; comment or uncomment current line
+- M-; comment or uncomment region
 * Special modes
 ** Shell
 - M-x shell

@@ -30,14 +30,18 @@
  use-package-always-ensure t
  sentence-end-double-space nil)
 
-;; Use clipboard normally
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+;; Use clipboard normally on linux
+(unless (eq system-type 'darwin)
+  (progn
+    (setq x-select-enable-clipboard t)
+    (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)))
 
 ;; Color scheme
 (load-theme 'leuven)
 ;; Better font size
 (set-face-attribute 'default nil :height 140)
+;; show line numbers
+(global-display-line-numbers-mode)
 
 ;; the package manager
 (require 'package)
