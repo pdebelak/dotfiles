@@ -41,6 +41,13 @@
 ;; Better font size
 (set-face-attribute 'default nil :height 140)
 
+;; function to copy current filename
+(defun copy-filename ()
+  (interactive)
+  (let ((filename (buffer-file-name)))
+    (if filename
+	(kill-new filename))))
+
 ;; the package manager
 (require 'package)
 (setq
