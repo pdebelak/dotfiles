@@ -40,8 +40,6 @@
 (load-theme 'leuven)
 ;; Better font size
 (set-face-attribute 'default nil :height 140)
-;; show line numbers
-(global-display-line-numbers-mode)
 
 ;; the package manager
 (require 'package)
