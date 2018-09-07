@@ -21,6 +21,7 @@
 - C-y yank
 * Other editing commands
 - C-/ undo
+- M-q fill-current-paragraph
 * Special modes
 ** Shell
 - M-x shell

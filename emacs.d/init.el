@@ -30,6 +30,10 @@
  use-package-always-ensure t
  sentence-end-double-space nil)
 
+;; Use clipboard normally
+(setq x-select-enable-clipboard t)
+(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
+
 ;; Color scheme
 (load-theme 'leuven)
 ;; Better font size
@@ -57,7 +61,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (auto-complete w3m emacs-w3m helm-projectile helm scala-mode use-package))))
+    (projectile auto-complete w3m emacs-w3m helm-projectile helm scala-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -70,6 +74,7 @@
   :interpreter
   ("scala" . scala-mode))
 ;; fuzzy find in project - C-c p h
+(use-package helm-projectile)
 (use-package projectile)
 (projectile-mode +1)
 ;; browser in emacs, ignore errors on systems without w3m binary installed
