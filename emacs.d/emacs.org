@@ -35,6 +35,12 @@
 - C-c C-k switch char mode (means works like a terminal)
 ** Org
 - Tab expands or collapses a level
+** Magit
+- M-x magit-status (shortcut C-x g) enter git status mode (other commands require this mode)
+- F pull from origin
+- s stage a file
+- c commit staged files (C-c C-c to exit after writing message)
+- P push to origin
 * Buffers
 - C-x C-f open file
 - C-x b switch buffer
