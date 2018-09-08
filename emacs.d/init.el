@@ -74,7 +74,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (projectile auto-complete w3m emacs-w3m helm-projectile helm scala-mode use-package))))
+    (magit projectile auto-complete w3m emacs-w3m scala-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -82,16 +82,23 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; use ido
+(require 'ido)
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
 ;; scala syntax highlighting
 (use-package scala-mode
+  :ensure t
   :interpreter
   ("scala" . scala-mode))
-;; fuzzy find in project - C-c p h
-(use-package helm-projectile)
-(use-package projectile)
+;; fuzzy find in project - C-c p f
+(use-package projectile :ensure t)
 (projectile-mode +1)
 ;; browser in emacs, ignore errors on systems without w3m binary installed
-(ignore-errors (use-package w3m))
+(ignore-errors (use-package w3m :ensure t))
 ;; autocomplete
-(use-package auto-complete)
+(use-package auto-complete :ensure t)
 (ac-config-default)
+;; better git integration
+(use-package magit :ensure t)
