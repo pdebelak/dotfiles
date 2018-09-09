@@ -16,8 +16,8 @@
 - C-d delete under cursor
 - C-k kill to end of line
 - M-d kill word
-- C-w backwords kill word
-- C-x C-k kill-region
+- M-backspace backwards kill word
+- C-w kill-region
 - C-SPC set mark (so you can select a region)
 - C-y yank
 * Other editing commands

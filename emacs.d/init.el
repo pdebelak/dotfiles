@@ -1,12 +1,6 @@
 ;; update exec-path
 (add-to-list 'exec-path "/usr/local/bin")
 
-;; Use C-w to kill backwords word
-(global-set-key "\C-w" 'backward-kill-word)
-
-;; Since C-w was used, bind C-x C-k to kill-region
-(global-set-key "\C-x\C-k" 'kill-region)
-
 ;; Easier than M-x on the left hand
 (global-set-key "\C-x\C-m" 'execute-extended-command)
 
