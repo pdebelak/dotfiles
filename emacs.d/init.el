@@ -90,8 +90,7 @@
 (use-package projectile
   :ensure t
   :config
-  (projectile-mode +1)
-  (setq projectile-use-git-grep nil))
+  (projectile-mode +1))
 ;; browser in emacs, ignore errors on systems without w3m binary
 ;; installed
 (ignore-errors (use-package w3m :ensure t))
