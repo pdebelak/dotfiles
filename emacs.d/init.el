@@ -87,13 +87,21 @@
   :interpreter
   ("scala" . scala-mode))
 ;; fuzzy find in project - C-c p f
-(use-package projectile :ensure t)
-(projectile-mode +1)
-;; browser in emacs, ignore errors on systems without w3m binary installed
+(use-package projectile
+  :ensure t
+  :config
+  (projectile-mode +1)
+  (setq projectile-use-git-grep nil))
+;; browser in emacs, ignore errors on systems without w3m binary
+;; installed
 (ignore-errors (use-package w3m :ensure t))
 ;; autocomplete
-(use-package auto-complete :ensure t)
-(ac-config-default)
+(use-package auto-complete
+  :ensure t
+  :config
+  (ac-config-default))
 ;; better git integration
-(use-package magit :ensure t)
-(global-set-key (kbd "C-x g") 'magit-status) ;; keybinding for magit status
+(use-package magit
+  :ensure t
+  :config
+  (global-set-key (kbd "C-x g") 'magit-status))
