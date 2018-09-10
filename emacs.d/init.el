@@ -104,3 +104,7 @@
   :ensure t
   :config
   (global-set-key (kbd "C-x g") 'magit-status))
+
+(load "~/.emacs.d/generic-search")
+(generic-search-initialize)
+(global-set-key (kbd "C-c g") 'generic-search)

@@ -33,9 +33,6 @@
 - s stage a file
 - c commit staged files (C-c C-c to exit after writing message)
 - P push to origin
-** Projectile
-- C-c p f find file in project
-- C-c p s g grep in project
 ** Term
 - M-x term
 - C-c C-j switch to line mode (means emacs commands work)
@@ -55,3 +52,5 @@
 - C-x C-s save buffer
 * General commands
 - C-x C-c quit
+- C-c p f find file in project (from projectile add-on)
+- C-c g generic-search (custom code, should use rg or grep)
