@@ -41,6 +41,9 @@
 - Tab expands or collapses a level
 ** Shell
 - M-x shell
+- M-p previous history entry
+- M-n next history entry
+- M-r history regex search
 ** Sql
 - To use:
   - Open a buffer named <something>.sql
