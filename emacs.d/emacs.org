@@ -29,7 +29,7 @@
 - M-u upcase word at point
 * Special modes
 ** Magit
-- M-x magit-status (shortcut C-x g) enter git status mode (other commands require this mode)
+- M-x magit-status (shortcut C-c g) enter git status mode (other commands require this mode)
 - F pull from origin
 - s stage a file
 - c commit staged files (C-c C-c to exit after writing message)
