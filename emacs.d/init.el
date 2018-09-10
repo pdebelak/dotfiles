@@ -1,3 +1,12 @@
+;;; init.el --- customization entry point
+
+
+;;; Commentary:
+
+;; Some basic customization
+
+;;; Code:
+
 ;; update exec-path
 (add-to-list 'exec-path "/usr/local/bin")
 
@@ -9,25 +18,21 @@
 (if (fboundp 'tool-bar-mode) (tool-bar-mode -1))
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
 
-;; Disable backup files
-(setq backup-inhibited t)
-(setq auto-save-default nil)
-
 ;; Some good defaults
 (setq
  inhibit-startup-screen t
  create-lockfiles nil
+ auto-save-default nil
+ backup-inhibited t
  make-backup-files nil
  column-number-mode t
  scroll-error-top-bottom t
- show-paren-delay 0.5
- use-package-always-ensure t
  sentence-end-double-space nil)
 
 ;; Use clipboard normally on linux
 (unless (eq system-type 'darwin)
   (progn
-    (setq x-select-enable-clipboard t)
+    (setq select-enable-clipboard t)
     (setq interprogram-paste-function 'x-cut-buffer-or-selection-value)))
 
 ;; Color scheme
@@ -37,8 +42,7 @@
 
 ;; function to copy current filename
 (defun copy-filename ()
-  "Copies filename for current buffer to kill ring if a filename
-exists."
+  "Copies filename for current buffer to kill ring if a filename exists."
   (interactive)
   (let ((filename (buffer-file-name)))
     (if filename
@@ -115,6 +119,23 @@ exists."
   :config
   (global-set-key (kbd "C-x g") 'magit-status))
 
+(defun start-sql-session ()
+  "Start sql buffer and sqli session for given connection.
+Loads connections from sql-connection-alist, if present.
+Otherwise, does nothing."
+  (interactive)
+  (let ((available-sql-connections nil))
+    (if (boundp 'sql-connection-alist)
+	(dolist (conn sql-connection-alist available-sql-connections)
+	  (push (symbol-name (car conn)) available-sql-connections)))
+    (if available-sql-connections
+	(let ((selected-connection (ido-completing-read "Open connection: " available-sql-connections)))
+	  (switch-to-buffer (concat selected-connection ".sql"))
+	  (sql-mode)
+	  (sql-connect (make-symbol selected-connection)))
+      (message "No connections available. Set them in sql-connection-alist."))))
+
 ;; load secrets if they exist
 (if (file-exists-p "~/.emacs.d/secrets.el")
     (load "~/.emacs.d/secrets"))
+;;; init.el ends here

@@ -26,6 +26,7 @@
 - M-q fill-current-paragraph
 - C-x C-; comment or uncomment current line
 - M-; comment or uncomment region
+- M-u upcase word at point
 * Special modes
 ** Magit
 - M-x magit-status (shortcut C-x g) enter git status mode (other commands require this mode)
@@ -33,6 +34,7 @@
 - s stage a file
 - c commit staged files (C-c C-c to exit after writing message)
 - P push to origin
+- b create or checkout branch
 ** Term
 - M-x term
 - C-c C-j switch to line mode (means emacs commands work)
@@ -47,7 +49,9 @@
 ** Sql
 - To use:
   - Open a buffer named <something>.sql
+  - Run M-x sql-mode
   - Run M-x sql-connect (it should autocomplete to set up connections)
+- Alternatively, run M-x start-sql-session and follow prompts (custom function that uses sql-connection-alist)
 - C-c C-b run sql buffer in sqli shell
 - C-c C-r run region form sql buffer in sqli shell
 * Buffers
@@ -62,4 +66,4 @@
 * General commands
 - C-x C-c quit
 - C-c p f find file in project (from projectile add-on)
-- C-c g generic-search (custom code, should use rg or grep)
+- C-c p s g grep in project (from projectile add-on, uses git grep)
