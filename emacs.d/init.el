@@ -111,7 +111,7 @@
 ;; autocomplete
 (use-package auto-complete
   :ensure t
-  :config
+  :init
   (ac-config-default))
 ;; better git integration
 (use-package magit
