@@ -41,6 +41,12 @@
 - Tab expands or collapses a level
 ** Shell
 - M-x shell
+** Sql
+- To use:
+  - Open a buffer named <something>.sql
+  - Run M-x sql-connect (it should autocomplete to set up connections)
+- C-c C-b run sql buffer in sqli shell
+- C-c C-r run region form sql buffer in sqli shell
 * Buffers
 - C-x C-f open file
 - C-x b switch buffer

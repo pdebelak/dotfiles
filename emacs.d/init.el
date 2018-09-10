@@ -37,6 +37,8 @@
 
 ;; function to copy current filename
 (defun copy-filename ()
+  "Copies filename for current buffer to kill ring if a filename
+exists."
   (interactive)
   (let ((filename (buffer-file-name)))
     (if filename
@@ -45,6 +47,11 @@
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook
           'delete-trailing-whitespace)
+
+;; don't truncate lines in sqli buffers
+(add-hook 'sql-interactive-mode-hook
+          (lambda ()
+            (toggle-truncate-lines t)))
 
 ;; the package manager
 (require 'package)
@@ -68,7 +75,7 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (magit projectile auto-complete w3m emacs-w3m scala-mode use-package))))
+    (flycheck magit projectile auto-complete scala-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -89,11 +96,14 @@
 ;; fuzzy find in project - C-c p f
 (use-package projectile
   :ensure t
+  :init
+  (projectile-mode +1)
   :config
-  (projectile-mode +1))
-;; browser in emacs, ignore errors on systems without w3m binary
-;; installed
-(ignore-errors (use-package w3m :ensure t))
+  (setq projectile-use-git-grep t))
+;; syntax checking
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
 ;; autocomplete
 (use-package auto-complete
   :ensure t
@@ -105,6 +115,6 @@
   :config
   (global-set-key (kbd "C-x g") 'magit-status))
 
-(load "~/.emacs.d/generic-search")
-(generic-search-initialize)
-(global-set-key (kbd "C-c g") 'generic-search)
+;; load secrets if they exist
+(if (file-exists-p "~/.emacs.d/secrets.el")
+    (load "~/.emacs.d/secrets"))
