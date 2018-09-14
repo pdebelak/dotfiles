@@ -26,6 +26,7 @@
 - M-q fill-current-paragraph
 - C-x C-; comment or uncomment current line
 - M-; comment or uncomment region
+- C-M-\ indent region
 - M-u upcase word at point
 * Special modes
 ** Magit
@@ -35,6 +36,7 @@
 - c commit staged files (C-c C-c to exit after writing message)
 - P push to origin
 - b create or checkout branch
+- b c to create and checkout a new branch
 ** Term
 - M-x term
 - C-c C-j switch to line mode (means emacs commands work)
@@ -54,6 +56,10 @@
 - Alternatively, run M-x start-sql-session and follow prompts (custom function that uses sql-connection-alist)
 - C-c C-b run sql buffer in sqli shell
 - C-c C-r run region form sql buffer in sqli shell
+** Restclient
+- M-x restclient-mode (might have an ~/.emacs.d/rest.http file in that mode already)
+- C-c C-c make request and switch to request buffer
+- C-c C-v make request and stay in rest buffer
 * Buffers
 - C-x C-f open file
 - C-x b switch buffer
