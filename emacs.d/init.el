@@ -59,6 +59,11 @@
 	  (lambda ()
 	    (setq python-shell-interpreter "python3")))
 
+;; javascript 2 space indent
+(add-hook 'js-mode-hook
+	  (lambda ()
+	    (setq js-indent-level 2)))
+
 ;; load secrets if they exist
 (if (file-exists-p "~/.emacs.d/secrets.el")
     (load "~/.emacs.d/secrets"))
@@ -88,7 +93,7 @@
     ("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default)))
  '(package-selected-packages
    (quote
-    (color-theme-sanityinc-tomorrow restclient flycheck magit projectile auto-complete scala-mode use-package))))
+    (rjsx-mode color-theme-sanityinc-tomorrow restclient flycheck magit projectile auto-complete scala-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -135,6 +140,11 @@
   :ensure t
   :config
   (load-theme 'sanityinc-tomorrow-day))
+(use-package rjsx-mode
+  :ensure t
+  :config
+  ;; always use rjsx mode for javascript (can't hurt)
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode)))
 
 (defun start-sql-session ()
   "Start sql buffer and sqli session for given connection.
