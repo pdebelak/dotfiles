@@ -54,6 +54,11 @@
           (lambda ()
             (toggle-truncate-lines t)))
 
+;; use python3
+(add-hook 'python-mode-hook
+	  (lambda ()
+	    (setq python-shell-interpreter "python3")))
+
 ;; load secrets if they exist
 (if (file-exists-p "~/.emacs.d/secrets.el")
     (load "~/.emacs.d/secrets"))

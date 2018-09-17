@@ -73,3 +73,4 @@
 - C-x C-c quit
 - C-c p f find file in project (from projectile add-on)
 - C-c p s g grep in project (from projectile add-on, uses git grep)
+- C-c p c compile in project (from projectile add-on)
