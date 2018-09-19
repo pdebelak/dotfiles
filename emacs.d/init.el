@@ -47,6 +47,7 @@
   (let ((filename (buffer-file-name)))
     (if filename
 	(kill-new filename))))
+(global-set-key (kbd "C-c c f") 'copy-filename)
 
 ;; delete trailing whitespace on save
 (add-hook 'before-save-hook
@@ -101,7 +102,7 @@
     ("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default)))
  '(package-selected-packages
    (quote
-    (elscreen exec-path-from-shell rjsx-mode color-theme-sanityinc-tomorrow restclient flycheck magit projectile auto-complete scala-mode use-package))))
+    (haml-mode elscreen exec-path-from-shell rjsx-mode color-theme-sanityinc-tomorrow restclient flycheck magit projectile auto-complete scala-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -158,10 +159,14 @@
   :config
   ;; always use rjsx mode for javascript (can't hurt)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode)))
+;; tabs
 (use-package elscreen
   :ensure t
   :init
   (elscreen-start))
+;; haml mode
+(use-package haml-mode
+  :ensure t)
 
 (defun start-sql-session ()
   "Start sql buffer and sqli session for given connection.
