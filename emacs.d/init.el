@@ -6,11 +6,14 @@
 
 ;;; Code:
 
-;; update exec-path
-(add-to-list 'exec-path "/usr/local/bin")
-
 ;; Easier than M-x on the left hand
-(global-set-key "\C-x\C-m" 'execute-extended-command)
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+
+;; Move window in direction
+(global-set-key (kbd "C-x w b") 'windmove-left)
+(global-set-key (kbd "C-x w f") 'windmove-right)
+(global-set-key (kbd "C-x w p") 'windmove-up)
+(global-set-key (kbd "C-x w n") 'windmove-down)
 
 ;; Turn off ui
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -64,6 +67,11 @@
 	  (lambda ()
 	    (setq js-indent-level 2)))
 
+;; css 2 space indent
+(add-hook 'css-mode-hook
+	  (lambda ()
+	    (setq css-indent-offset 2)))
+
 ;; load secrets if they exist
 (if (file-exists-p "~/.emacs.d/secrets.el")
     (load "~/.emacs.d/secrets"))
@@ -93,7 +101,7 @@
     ("bb08c73af94ee74453c90422485b29e5643b73b05e8de029a6909af6a3fb3f58" default)))
  '(package-selected-packages
    (quote
-    (rjsx-mode color-theme-sanityinc-tomorrow restclient flycheck magit projectile auto-complete scala-mode use-package))))
+    (elscreen exec-path-from-shell rjsx-mode color-theme-sanityinc-tomorrow restclient flycheck magit projectile auto-complete scala-mode use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -106,6 +114,11 @@
 (setq ido-enable-flex-matching t)
 (setq ido-everywhere t)
 (ido-mode 1)
+;; set path from bash
+(use-package exec-path-from-shell
+  :ensure t
+  :init
+  (exec-path-from-shell-initialize))
 ;; scala syntax highlighting
 (use-package scala-mode
   :ensure t
@@ -145,6 +158,10 @@
   :config
   ;; always use rjsx mode for javascript (can't hurt)
   (add-to-list 'auto-mode-alist '("\\.js\\'" . rjsx-mode)))
+(use-package elscreen
+  :ensure t
+  :init
+  (elscreen-start))
 
 (defun start-sql-session ()
   "Start sql buffer and sqli session for given connection.
