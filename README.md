@@ -1,5 +1,7 @@
 # Env configuration
 
+Note: Development on this has moved to https://gitlab.com/pdebelak/dotfiles
+
 This is my custom shell configuration.
 
 ## Instructions
